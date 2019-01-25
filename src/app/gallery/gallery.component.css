@@ -1,0 +1,23 @@
+.cadre {
+  height: 300px;
+}
+.likes {
+  margin-left: 5px;
+  font-size: 0.7em;
+}
+.clickable {
+  cursor: pointer;
+}
+.img-circle {
+  width: 15%;
+  height: 15%;
+}
+.author {
+  display: block;
+  font-size: 70%;
+  color: #6c757d;
+  font-style: italic;
+  position: absolute;
+  bottom: 5%;
+}
+/**/

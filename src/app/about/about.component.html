@@ -1,0 +1,33 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">About component</div>
+  <div class="panel-body">
+    <ul class="list-group">
+      <li *ngFor="let c of comments" class="list-group-item">
+        {{ c.message }}
+        <span class="badge">{{ c.date | date: "dd/MM/yyyy" }}</span>
+      </li>
+    </ul>
+    <!---->
+
+    <form>
+      <div class="form-group">
+        <label for="msg">Message:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="msg"
+          [(ngModel)]="commentaire.message"
+          [ngModelOptions]="{standalone: true}"
+        />
+        <!---->
+        <button
+          class="btn btn-primary"
+          (click)="onAddComment(commentaire)"
+          [disabled]="!commentaire.message"
+        >
+          <span class="glyphicon glyphicon-plus"></span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
